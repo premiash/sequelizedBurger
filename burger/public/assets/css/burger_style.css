@@ -1,0 +1,40 @@
+body {
+	background-image: url("../assets/img/Background.jpg");
+	height: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: #fff;
+}
+
+
+/*
+
+<div class="mainContainer">
+
+{{#each burgers}}
+
+  <pre>
+    {{#if this.devoured}}
+      <span>             <span>This burger was eaten: {{burger_name}}
+    {{else}}
+      {{burger_name}} 
+      <form action="/update/{{ id }}" method="post">
+      <button type="submit">Devour it!</button>
+    </form> 
+    {{/if}}  
+  </pre>
+{{/each}}
+
+<form class="create-update-form" action="/" method="POST">
+
+  <div class="form-group">
+    <label for="bg"></label>
+    <input type="text" id="bg" name="name">
+  </div>
+
+  <button type="submit">Submit</button>
+  <p>"Enter a Burger you want to eat"</p>
+</form>
+</div>
+*/
+
