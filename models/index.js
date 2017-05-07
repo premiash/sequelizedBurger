@@ -9,10 +9,12 @@ var config    = require(__dirname + '/../config/config.json')[env];
 var db        = {};
 
 console.log("env: " + env);
-console.log("config: " + config);
+console.log("config: " + config.use_env_variable);
 
-if (config.use_env_variable) {
-  var sequelize = new Sequelize(process.env[config.use_env_variable]);
+//if (config.use_env_variable) {
+  if(env === "production")
+  //var sequelize = new Sequelize(process.env[config.use_env_variable]);
+  var sequelize = new Sequelize(process.env.JAWSDB_URL);
 } else {
   var sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
